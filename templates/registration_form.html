@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %} Registration form {% endblock title %}
+{%  block styles %}  <link rel="stylesheet" href="/static/styles/forms.css" /> {% endblock styles %}
+
+{% block body %}
+  <header>
+        <nav>
+          <ul>
+            <li class="home">
+              <a class="home-link" href="{{ url_for('home') }}">HOME</a>
+            </li>
+            <li class="about-me">ABOUT ME</li>
+          </ul>
+        </nav>
+      </header>
+
+    <form action="{{ url_for('home') }}">
+      <div class="form-content">
+        <legend><h1>Sign Up</h1></legend>
+        <input type="text" placeholder="username" /> <br />
+        <input
+          type="email"
+          placeholder="email
+            "
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="password
+            "
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="password again
+            "
+        />
+        <br />
+        <fieldset>
+          <input type="checkbox" name="checkbox" id="checkbox" />
+          <label for="checkbox">I agree with the terms of use</label>
+        </fieldset>
+
+        <br />
+        <br />
+        <input type="submit" value="REGISTER" /> <br />
+      </div>
+    </form>
+{% endblock body %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Login form {% endblock title %}
+{%  block styles %}  <link rel="stylesheet" href="/static/styles/forms.css" /> {% endblock styles %}
+
+{% block body %}
+    <!-- header code inherited from home page -->
+    <header>
+        <nav>
+          <ul>
+            <li class="home">
+              <a class="home-link" href="{{ url_for('home') }}">HOME</a>
+            </li>
+            <li class="about-me">ABOUT ME</li>
+          </ul>
+        </nav>
+      </header>
+<!-- header code inherited from home page -->
+    <form action="" method="post">
+      <div class="form-content">
+        <legend><h1>Login to create post</h1></legend>
+     
+        
+        {{ form.username(placeholder='username') }}<br />
+        {{ form.password(placeholder='password') }}<br />
+        {{ form.remember_me }}
+        {{ form.remember_me.label }}
+        
+        <br />
+        {{ form.submit }} <br />      
+
+        Don't have an account yet?
+        <span class="register"
+          ><a href="{{ url_for('registration_form') }}">register</a></span
+        >
+      </div>
+    </form>
+{% endblock body %}
+
+

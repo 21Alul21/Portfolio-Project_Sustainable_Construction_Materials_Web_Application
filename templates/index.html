@@ -1,0 +1,54 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} Landing page {% endblock title %}
+{%  block styles %}  <link rel="stylesheet" href="/static/styles/index.css" /> {% endblock styles %}
+  
+{% block body %}
+    <header>
+      <h1>
+        Welcome to my Portfollio<br />
+        Website
+      </h1>
+      <br />
+    </header>
+    <div class="container">
+      <main>
+        <div main_group>
+          <div class="image"></div>
+          <div class="about">
+            <h2><span> Augustine Alul </span></h2>
+            <br />
+            Civil Engineer and Software Engineering Student <br />
+            at ALX Africa
+          </div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="aside-div">
+          <h2>
+            "The construction industry remains <br />
+            one of the least digitized in the world, <br />
+            and this has limited the rate of innovative <br />transformation in
+            the industry."
+          </h2>
+          <br />
+          <br />
+          <p>
+            <span class=aside-span>
+              This project proposes a digital solution to enhance the <br />
+              adoption and promotion of sustainable environmental materials
+              <br />
+              and practices.</span
+            >
+          </p>
+          <a href="{{ url_for('index') }}"
+            ><button class="web-button">View project webpage</button></a
+          >
+        </div>
+      </aside>
+    </div>
+{% endblock body %}
+ 
