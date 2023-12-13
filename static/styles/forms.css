@@ -107,6 +107,11 @@ fieldset{
 border: none;
 }
 
+.about-me{
+    text-decoration: none;
+    color: white;
+}
+
 /* media querry */
 
 @media (max-width: 500px){

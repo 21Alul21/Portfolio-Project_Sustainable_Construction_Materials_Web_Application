@@ -6,7 +6,7 @@
     <title>
     {% block title %}
         {% if title %}
-                <title>{{ title }}</title>
+                {{ title }}
             {% else %}
              <title>Sustainable Materials web app</title>
         {% endif %}
@@ -16,6 +16,13 @@
 </head>
 
 <body>
+    {% for message in get_flashed_messages() %}
+        <div style="width: 100%; height: 30px; color: lightgreen; background-color: rgb(194, 134, 61);
+        text-align: center; padding: 10px; box-sizing: border-box; display: flex; 
+        justify-content: center; align-items: center;" class="flash-message">
+            {{ message }}
+        </div>    
+    {% endfor %}
 
     {% block body %}
     {% endblock body %}

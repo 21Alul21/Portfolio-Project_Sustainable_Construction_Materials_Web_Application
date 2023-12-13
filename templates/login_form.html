@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 
 
-{% block title %} Login form {% endblock title %}
-{%  block styles %}  <link rel="stylesheet" href="/static/styles/forms.css" /> {% endblock styles %}
+{%  block styles %}  <link rel="stylesheet" href="{{ url_for('static', filename='/styles/forms.css') }}"> {% endblock styles %}
 
 {% block body %}
     <!-- header code inherited from home page -->
@@ -12,16 +11,15 @@
             <li class="home">
               <a class="home-link" href="{{ url_for('home') }}">HOME</a>
             </li>
-            <li class="about-me">ABOUT ME</li>
+            <li class="about-m"><a style="text-decoration: none; color:white;" class="about-me" href="{{ url_for('about_me') }}">ABOUT ME</a></li>
           </ul>
         </nav>
       </header>
 <!-- header code inherited from home page -->
-    <form action="" method="post">
+    <form action="" method="POST">
       <div class="form-content">
         <legend><h1>Login to create post</h1></legend>
-     
-        
+        {{ form.hidden_tag() }}
         {{ form.username(placeholder='username') }}<br />
         {{ form.password(placeholder='password') }}<br />
         {{ form.remember_me }}

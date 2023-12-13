@@ -2,10 +2,11 @@
   padding: 0;
   box-sizing: border-box;
   margin: 0;
+  
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(/static/images/construction_image.jpg);
 
@@ -15,17 +16,20 @@ body {
 }
 
 .image {
+  width: 100%;
   height: 500px;
   margin-bottom: 20px;
-  background-image: url("/static/images/IMG_20220921_142045_5~3.jpg");
+  background-image: url("/static/images/greenconban.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size:cover;
 }
 
 .main_group {
   display: flex;
   flex-direction: column;
   color: white;
+  width: 60%;
+ 
  
 }
 
@@ -34,14 +38,14 @@ header {
   font-size: 30px;
   position: relative;
   width: 100%;
-  padding-left: 20%;
-  padding-top: 50px;
+  padding-left: 21.8%;
+  padding-bottom: 5px;
   background: linear-gradient(
     to top right,
     rgba(34, 37, 36, 0.5),
     rgba(12, 121, 84, 0.5)
   );
-}
+ }
 
 span {
   color: white;
@@ -59,15 +63,15 @@ aside {
 main {
   background-color: rgba(0, 0, 0, 0.5);
   margin-left: 40px;
-  
+ 
 }
 
 .container {
   display: grid;
-  grid-template-columns: 20% 40%;
+  grid-template-columns: 40% 20%;
   justify-content: center;
   gap: 10px;
-  }
+    }
 
 .aside-div {
   padding: 30px;
@@ -106,3 +110,141 @@ main:hover{
 aside:hover{
   border: rgb(9, 53, 61) solid;
 }
+
+/*
+landing page customisation
+*/
+
+nav{
+  width: 200px;
+  
+   
+  }
+
+  .intro-div{
+
+display: flex;
+  }
+
+  nav{
+    margin-left: 50px;
+    
+    width: 35%;
+  }
+  
+  .buttons-container{
+    display: flex;
+    
+  }
+  
+  .intro-container{
+    
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.about-me,  .view-project{
+
+  
+  border: solid white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 20px;
+  background: none;
+  color: white;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.feature-about-container{
+
+display: grid;
+
+grid-template-columns:50% 30%;
+gap: 5px;
+margin: auto;
+justify-content: center;
+}
+
+.about{
+  color: black;
+  padding: 15px;
+  border: solid;
+  text-align: justify;
+  background-color: white;
+}
+
+.feature{
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.feature-1, .feature-2, .feature-3{
+  border: solid;
+  width: 100%;
+  height: 100px; 
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.feature-1{
+
+}
+.search, .login, .register{
+  border: solid;
+  width: 70%;
+  border: solid green;
+ height: 100%;
+background-color: red;
+margin-left: auto;
+border-radius: 5px;
+}
+
+.search{
+background: url(/static/images/Search\ bar.jpg) no-repeat;
+background-size: contain;
+}
+
+.login{
+  background: url(/static/images/Login.jpg) no-repeat;
+  background-size: cover;
+  background-position: 0 -80px;
+  
+  }
+  
+.register{
+  background: url(/static/images/Registration\ page.jpg) no-repeat;
+  background-size: cover;
+  }
+
+  .buttons-container{
+    width: 80%;
+  }
+
+.view-project, .about-me{
+  width: 100px;
+  padding: 20px;
+  cursor: pointer;
+  
+}
+
+
+
+/*
+  <div class="about">
+            <h2><span> Augustine Alul </span></h2>
+            <br />
+            Civil Engineer and Software Engineering Student <br />
+            at ALX Africa
+          </div>
+
+
+          */
